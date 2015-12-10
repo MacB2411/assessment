@@ -49,7 +49,7 @@ public class TEACHER
         
        }
     
-   }
+    }
     
      public void displayPupil() {
         System.out.println("A listing of all pupils who sat the exam\n");
@@ -61,7 +61,7 @@ public class TEACHER
       }
 
     public void countTOPmark() throws IOException
-    {
+      {
          int maxMark = MarkList[0].getMark();
          int maxDataPosition = 0;
          String fileContent = "";
@@ -76,6 +76,9 @@ public class TEACHER
 
         
   		    } 
+  		    
+  		   
+
         }
     
         
@@ -83,7 +86,7 @@ public class TEACHER
           System.out.print("Position is:" + maxDataPosition + " , Value is:");
           MarkList[maxDataPosition].displayDetails();
           System.out.println();
-          
+          fileContent = fileContent.concat(MarkList[i].maxDataPosition);
         }
         
      public static void main(String[] args)  throws IOException
