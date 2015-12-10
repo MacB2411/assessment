@@ -6,12 +6,16 @@ public class TEACHER
     private MARK MarkList[];
     // number of members calculated after reading file
     int noOfPupil;
-    FILEREADCSV examDataFile;        // to read file from storage
+    // to read file from storage
+    FILEREADCSV examDataFile;
+    FILEWRITECSV resultFile;
+    
     int topPupil;
     public TEACHER()  throws IOException
     {
         // create file handler objects
         examDataFile = new FILEREADCSV();
+        resultFile = new FILEWRITECSV();
     }
 
     // top level algorithm
@@ -60,6 +64,7 @@ public class TEACHER
     {
          int maxMark = MarkList[0].getMark();
          int maxDataPosition = 0;
+         String fileContent = "";
          // repeat for the REST of the array
         for (int i=1; i<50; i++) {
 
@@ -78,6 +83,7 @@ public class TEACHER
           System.out.print("Position is:" + maxDataPosition + " , Value is:");
           MarkList[maxDataPosition].displayDetails();
           System.out.println();
+          
         }
         
      public static void main(String[] args)  throws IOException

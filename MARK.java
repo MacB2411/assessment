@@ -46,6 +46,7 @@ public class MARK
         System.out.print("Pupil Name is " + fName + " " + sName);
         System.out.print(",  top mark is ");
         System.out.println(Mark);
+        
     }
     
 }
