@@ -60,7 +60,7 @@ public class TEACHER
         System.out.print("\n\n\n");
       }
 
-    public void countTOPmark() throws IOException
+     public void countTOPmark() throws IOException
       {
          int maxMark = MarkList[0].getMark();
          int maxDataPosition = 0;
@@ -86,7 +86,11 @@ public class TEACHER
           System.out.print("Position is:" + maxDataPosition + " , Value is:");
           MarkList[maxDataPosition].displayDetails();
           System.out.println();
-          fileContent = fileContent.concat(MarkList[i].maxDataPosition);
+          fileContent = fileContent.concat(MarkList[maxDataPosition].writeDetails());
+          System.out.println("** Preparing to write data file.");
+          resultFile.writeCSVtable(fileContent);
+          System.out.println("** File written and closed.");
+
         }
         
      public static void main(String[] args)  throws IOException
@@ -95,6 +99,7 @@ public class TEACHER
          myTeacher.processMark();
        }
     
+       
     
        }
 
